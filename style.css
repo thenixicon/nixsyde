@@ -1,13 +1,26 @@
 /* Basic responsive styles for Nixsyde homepage */
 
 body {
-    font-family: sans-serif; /* Or choose a preferred font */
+    font-family: 'Open Sans', sans-serif; /* Apply Open Sans to body */
     margin: 0;
     padding: 0;
     line-height: 1.6;
     color: #cccccc; /* Light gray default text color */
     background-color: #1a0033; /* Very dark purple background */
     overflow-x: hidden; /* Prevent horizontal scrolling caused by padding/margins */
+    position: relative; /* Needed for absolute positioning of watermark */
+}
+
+.watermark-bg {
+    position: fixed; /* Fixed position relative to viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire viewport */
+    opacity: 0.05; /* Adjust opacity for watermark effect */
+    z-index: -1; /* Place behind other content */
+    pointer-events: none; /* Allow clicks/interactions on elements above */
 }
 
 header {
@@ -32,6 +45,7 @@ header h1 {
     margin: 0;
     color: #e0ccff; /* Light purple heading color */
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Subtle text shadow */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins to h1 */
 }
 
 nav {
@@ -67,6 +81,7 @@ main section {
 main section h2 {
     color: #e0ccff; /* Light purple heading color */
     text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Subtle text shadow */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins to h2 */
 }
 
 #hero {
@@ -142,7 +157,15 @@ main section h2 {
 
 .template-item:hover {
     transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 8px 12px rgba(0,0,0,0.3); /* Stronger shadow on hover */
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2); /* Stronger shadow on hover */
+}
+
+.template-item img {
+    display: block; /* Remove extra space below image */
+    width: 100%; /* Image fills container width */
+    height: 100%; /* Image fills container height */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    border-radius: 8px; /* Match container border radius */
 }
 
 #testimonials {
