@@ -240,8 +240,8 @@ footer {
     }
 
     header nav a {
-        display: block;
-        margin: 10px 0;
+        display: inline-block; /* Display horizontally */
+        margin: 0 8px; /* Add horizontal margin */
     }
     
     main section {
