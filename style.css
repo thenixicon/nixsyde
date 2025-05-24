@@ -1,0 +1,286 @@
+/* Basic responsive styles for Nixsyde homepage */
+
+body {
+    font-family: sans-serif; /* Or choose a preferred font */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #cccccc; /* Light gray default text color */
+    background-color: #1a0033; /* Very dark purple background */
+    overflow-x: hidden; /* Prevent horizontal scrolling caused by padding/margins */
+}
+
+header {
+    background: linear-gradient(to bottom, #330066, #1a0033); /* Darker purple gradient */
+    padding: 1rem 0;
+    text-align: center; /* Center header content */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Darker shadow */
+    display: flex; /* Use flexbox for header content layout */
+    flex-direction: column; /* Stack logo and nav vertically */
+    align-items: center; /* Center items horizontally in the column */
+}
+
+header img {
+    max-width: 180px; /* Ensure logo width is reasonable */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 15px; /* More space below logo */
+    margin-top: 10px; /* Space above logo */
+    opacity: 1; /* Ensure full opacity, not transparent */
+}
+
+header h1 {
+    margin: 0;
+    color: #e0ccff; /* Light purple heading color */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Subtle text shadow */
+}
+
+nav {
+    margin-top: 10px; /* Space above nav */
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #e0ccff; /* Light purple link color */
+    font-weight: bold;
+}
+
+main section {
+    padding: 40px 20px; /* Increased padding */
+    margin-bottom: 20px;
+    background-color: #330066; /* Darker purple background for sections */
+    color: #cccccc; /* Light gray text for sections */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Darker shadow */
+    border-radius: 8px; /* Rounded corners */
+    max-width: 1000px; /* Max width for content */
+    margin: 20px auto; /* Center sections */
+    opacity: 1; /* Default fully visible */
+    transform: translateY(0); /* Default position */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+}
+
+.hidden-section {
+    opacity: 0; /* Fade out */
+    transform: translateY(50px); /* Move down slightly as it fades */
+}
+
+main section h2 {
+    color: #e0ccff; /* Light purple heading color */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Subtle text shadow */
+}
+
+#hero {
+    /* Styles to match other main sections */
+    background-color: #330066; /* Darker purple background, matching main sections */
+    color: #cccccc; /* Light gray text, matching main sections */
+    text-align: center;
+    padding: 40px 20px; /* Matching padding of main sections */
+    margin-bottom: 20px; /* Keep margin bottom */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Matching shadow of main sections */
+    border-radius: 8px; /* Matching border radius of main sections */
+    max-width: 1000px; /* Matching max-width of main sections */
+    margin: 20px auto; /* Center the section like others */
+    opacity: 1; /* Ensure visibility */
+    transform: translateY(0); /* Ensure default position */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Maintain transition */
+}
+
+#hero h2 {
+    color: #e0ccff; /* Light purple heading color, matching other sections */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3); /* Subtle text shadow */
+    font-size: 2em; /* Adjust heading size */
+}
+
+#hero p {
+    color: #cccccc; /* Light gray text, matching other sections */
+    font-size: 1.1em; /* Adjust paragraph size */
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(to bottom, #e0ccff, #f8f8ff); /* Light gradient button */
+    color: #4b0082; /* Dark purple text on light button */
+    padding: 12px 25px; /* Increased padding */
+    text-decoration: none;
+    border-radius: 25px; /* Pill shape */
+    margin-top: 20px; /* Increased margin */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Button shadow */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition */
+}
+
+.cta-button:hover {
+    transform: translateY(-2px); /* Lift effect on hover */
+    box-shadow: 0 6px 8px rgba(0,0,0,0.4); /* Stronger shadow on hover */
+}
+
+.template-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items when they don't fill the row */
+    gap: 20px; /* Space between template items */
+    padding-top: 20px; /* Add some padding above gallery */
+}
+
+.template-item {
+    flex: 1 1 280px; /* Adjusted flex-basis for 3 columns */
+    max-width: 300px; /* Adjusted max-width */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Rounded corners */
+    /* padding: 20px; Remove padding from the item itself */
+    margin: 0; /* Reset margin if using gap */
+    text-align: center;
+    background-color: #4d0099; /* Darker purple for items */
+    color: #cccccc; /* Light gray text */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Item shadow */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition */
+    aspect-ratio: 16 / 9; /* Create a wide rectangular box */
+    display: flex; /* Use flexbox for content alignment inside */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    overflow: hidden; /* Hide content that overflows the aspect ratio */
+}
+
+.template-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 12px rgba(0,0,0,0.3); /* Stronger shadow on hover */
+}
+
+#testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20px; /* Add padding above testimonials */
+    /* Overrides to remove container look */
+    background-color: transparent; /* Make background transparent */
+    box-shadow: none; /* Remove shadow */
+    border-radius: 0; /* Remove border radius */
+    margin: 0 auto; /* Adjust margin if needed, 0 auto to center */
+    padding: 20px 0; /* Adjust padding - vertical padding still useful */
+}
+
+.testimonial-item {
+    flex: 1 1 280px; /* Adjusted flex-basis for 3 columns */
+    max-width: 300px; /* Adjusted max-width */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Increased padding */
+    margin: 0;
+    text-align: left; /* Testimonials usually left-aligned */
+    background-color: #4d0099; /* Darker purple background, matching template items */
+    color: #cccccc; /* Light gray text */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Item shadow */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition */
+    /* Styles to match image */
+    font-style: italic; /* Italicize the quote */
+    position: relative; /* Needed for potential absolute positioning of elements inside */
+    padding-bottom: 40px; /* Make space for name/stars at the bottom */
+}
+
+.testimonial-item::before {
+    content: '\201C'; /* Left double quotation mark */
+    font-size: 3em;
+    color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.testimonial-item::after {
+    content: '\201D'; /* Right double quotation mark */
+    font-size: 3em;
+    color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Basic styling for name and stars - assuming they are in separate elements */
+.testimonial-item strong {
+    display: block; /* Name on new line */
+    margin-top: 10px; /* Space above name */
+    color: white; /* White color for name */
+    font-style: normal; /* Name should not be italic */
+}
+
+.testimonial-item .stars {
+    color: gold; /* Color for stars (you might need to add star icons/font) */
+    margin-top: 5px; /* Space above stars */
+    font-style: normal; /* Stars should not be italic */
+}
+
+.testimonial-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 12px rgba(0,0,0,0.3); /* Stronger shadow on hover */
+}
+
+footer {
+    background-color: #1a0033; /* Very dark purple footer */
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0; /* Increased padding */
+    margin-top: 40px; /* Space above footer */
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.5); /* Shadow above footer */
+}
+
+/* Basic Media Query Example - Adjustments for smaller screens */
+@media (max-width: 768px) {
+    
+    body {
+        font-size: 0.9em; /* Slightly smaller base font size */
+    }
+
+    header {
+        padding: 1rem 10px; /* Adjust header padding */
+        flex-direction: column; /* Ensure vertical stacking on small screens */
+    }
+
+    header nav {
+        margin-top: 10px; /* Space above nav on small screens */
+    }
+
+    header nav a {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    main section {
+        padding: 30px 15px; /* Adjust section padding */
+        margin: 15px auto; /* Adjust section margin */
+    }
+
+    main section h2 {
+         font-size: 1.5em; /* Adjust heading size on mobile */
+    }
+
+    #hero {
+        padding: 40px 15px; /* Adjust hero padding */
+    }
+
+    #hero h2 {
+        font-size: 1.8em; /* Adjust heading size on mobile */
+    }
+
+    #hero p {
+        font-size: 1em; /* Adjust paragraph size on mobile */
+    }
+
+    .cta-button {
+        display: block;
+        width: 90%; /* Slightly wider buttons on small screens */
+        margin: 15px auto;
+        text-align: center;
+        padding: 10px 20px; /* Adjust button padding */
+    }
+
+    /* Adjust item base width for smaller screens */
+    .template-item,
+    .testimonial-item {
+        flex: 1 1 90%; /* Allow items to take up more width */
+        max-width: none; /* Remove max width restriction */
+    }
+
+    footer {
+        padding: 1rem 10px; /* Adjust footer padding */
+    }
+} 
